@@ -34,7 +34,9 @@ class App extends Component {
       return robot.name.toLowerCase().includes(searchfield.toLowerCase());
     });
 
-   
+    if (robots.length === 0) {
+      return <h1 className="tc f1">Loading</h1>;
+    } else {
       return (
         <div className="tc">
           <h1 className="f1 ">Robofriends</h1>
@@ -47,7 +49,7 @@ class App extends Component {
           </Scroll>
         </div>
       );
-    
+    }
   }
 }
 
